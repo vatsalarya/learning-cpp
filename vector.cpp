@@ -20,7 +20,7 @@ int main(){
        cin>>choice;
 
      if((choice=='p')||(choice=='P')){
-        if(numbers.size()==0)
+        if((numbers.size())==0)
             cout<<"[] - the list is empty.\n";           
         else{
             cout<<"[ ";
