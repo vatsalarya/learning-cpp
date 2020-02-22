@@ -3,19 +3,22 @@
 using namespace std;
 
 int main(){
-   cout<<"Please select one of the following options : \n"
-       <<"P - Print numbers\n" 
-       <<"A - Add a number\n"
-       <<"M - Display mean of the numbers\n"
-       <<"S - Display teh smallest number\n"
-       <<"L - Display the largest number\n"
-       <<"Q - Quit\n\n";
+   
    vector <int> numbers;
    int choice{};
    cin>>choice;
    cout<<boolalpha;
    bool complete{false};
    while(complete=false){
+
+      cout<<"Please select one of the following options : \n"
+       <<"P - Print numbers\n" 
+       <<"A - Add a number\n"
+       <<"M - Display mean of the numbers\n"
+       <<"S - Display teh smallest number\n"
+       <<"L - Display the largest number\n"
+       <<"Q - Quit\n\n";
+
      if((choice=='p')||(choice=='P')){
         if(numbers.size()==0)
             cout<<"[] - the list is empty.\n";           
