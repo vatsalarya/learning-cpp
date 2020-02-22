@@ -9,21 +9,19 @@ int main(){
        <<"M - Display mean of the numbers\n"
        <<"S - Display teh smallest number\n"
        <<"L - Display the largest number\n"
-       <<"Q - Quit\n";
+       <<"Q - Quit\n\n";
    vector <int> numbers;
    int choice{};
-   int array_size(){
-      return numbers.size();
-   }
    cin>>choice;
+   cout<<boolalpha;
    bool complete{false};
-   while((complete)=false){
+   while(complete=false){
      if((choice=='p')||(choice=='P')){
-        if(array_size()==0)
+        if(numbers.size()==0)
             cout<<"[] - the list is empty.\n";           
         else{
             cout<<"[ ";
-            for(int i=0;i<array_size();i++){
+            for(int i=0;i<numbers.size();i++){
                 cout<<numbers.at(i)<<" ";
             }
             cout<<"]";
@@ -38,21 +36,21 @@ int main(){
          cout<<add_num<<" added!\n";
      }
      else if((choice=='m')||(choice=='M')){
-        if(array_size()==0)
+        if(numbers.size()==0)
             cout<<"Unable to calculate mean - no data.";
         else{
          int sum{};
-         for(int i=0;i<array_size();i++)
+         for(int i=0;i<numbers.size();i++)
             sum+=numbers.at(i);
-        cout<<"\nThe average of the numbers in the list is : "<<sum/array_size();
+        cout<<"\nThe average of the numbers in the list is : "<<sum/numbers.size();
         }
      }
      else if((choice=='s')||(choice=='S')){
-        if(array_size()==0)
+        if(numbers.size()==0)
             cout<<"Unable to calculate smallest - no data.";
         else{
             int smallest{};
-            for(int i=0;i<array_size();i++){
+            for(int i=0;i<numbers.size();i++){
                 smallest=numbers.at(0);
             if(smallest>numbers.at(i))
                 smallest=numbers.at(i); 
@@ -62,11 +60,11 @@ int main(){
      }
 
      else if((choice=='l')||(choice=='L')){
-          if(array_size()==0)
+          if(numbers.size()==0)
             cout<<"Unable to calculate largest - no data.";
         else{
             int largest{};
-            for(int i=0;i<array_size();i++){
+            for(int i=0;i<numbers.size();i++){
                 largest=numbers.at(0);
             if(largest<numbers.at(i))
                 largest=numbers.at(i);
