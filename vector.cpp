@@ -5,8 +5,6 @@ using namespace std;
 int main(){
    
    vector <int> numbers;
-   int choice{};
-   cin>>choice;
    cout<<boolalpha;
    bool complete{false};
    while(complete=false){
@@ -18,6 +16,8 @@ int main(){
        <<"S - Display teh smallest number\n"
        <<"L - Display the largest number\n"
        <<"Q - Quit\n\n";
+       int choice{};
+       cin>>choice;
 
      if((choice=='p')||(choice=='P')){
         if(numbers.size()==0)
