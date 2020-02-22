@@ -21,9 +21,8 @@ int main(){
             cout<<"[] - the list is empty.\n";           
         else{
             cout<<"[ ";
-            for(int i=0;i<numbers.size();i++){
+            for(int i=0;i<numbers.size();i++)
                 cout<<numbers.at(i)<<" ";
-            }
             cout<<"]";
         }
         
@@ -50,8 +49,8 @@ int main(){
             cout<<"Unable to calculate smallest - no data.";
         else{
             int smallest{};
-            for(int i=0;i<numbers.size();i++){
-                smallest=numbers.at(0);
+            smallest=numbers.at(0);
+            for(int i=1;i<numbers.size();i++){
             if(smallest>numbers.at(i))
                 smallest=numbers.at(i); 
             }
@@ -64,8 +63,8 @@ int main(){
             cout<<"Unable to calculate largest - no data.";
         else{
             int largest{};
-            for(int i=0;i<numbers.size();i++){
-                largest=numbers.at(0);
+            largest=numbers.at(0);
+            for(int i=1;i<numbers.size();i++){
             if(largest<numbers.at(i))
                 largest=numbers.at(i);
         }
