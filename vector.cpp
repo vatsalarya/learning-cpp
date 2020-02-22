@@ -28,7 +28,6 @@ int main(){
                 cout<<number<<" ";
             cout<<"]";
          }
-        
       }
       else if((choice=='a')||(choice=='A')){
          cout<<"\nEnter a number to add to the list : ";
