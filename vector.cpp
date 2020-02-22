@@ -8,7 +8,7 @@ int main(){
    vector <int> numbers;
    char choice{};
    do{
-      cout<<"Please select one of the following options : \n"
+      cout<<"\nPlease select one of the following options : \n"
           <<"P - Print numbers\n" 
           <<"A - Add a number\n"
           <<"M - Display mean of the numbers\n"
