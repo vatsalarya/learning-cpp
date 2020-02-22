@@ -24,27 +24,24 @@ int main(){
             cout<<"[ ";
             for(auto number : numbers)
                 cout<<number<<" ";
-            cout<<"]";
+            cout<<"]"<<endl;;
          }
-      }
-      else if((choice=='a')||(choice=='A')){
+      }else if((choice=='a')||(choice=='A')){
          cout<<"\nEnter a number to add to the list : ";
          int add_num{};
          cin>>add_num;
          numbers.push_back(add_num);
          cout<<add_num<<" added!\n";
-      }
-      else if((choice=='m')||(choice=='M')){
+      }else if((choice=='m')||(choice=='M')){
          if(numbers.size()==0)
-            cout<<"Unable to calculate mean - no data.";
+            cout<<"Unable to calculate mean - no data."<<endl;
          else{
-            int sum{};
+            float sum{};
             for(auto number : numbers)
                sum+=number;
-         cout<<"\nThe average of the numbers in the list is : "<<sum/numbers.size();
+         cout<<"\nThe average of the numbers in the list is : "<<sum/numbers.size()<<endl;//or  static_cast<double>(sum)/numbers.size..if sum was also declared int
          }
-      }
-      else if((choice=='s')||(choice=='S')){
+      }else if((choice=='s')||(choice=='S')){
          if(numbers.size()==0)
             cout<<"Unable to calculate smallest - no data.";
          else{
@@ -55,10 +52,8 @@ int main(){
             }
          cout<<"The smallest number in the list is : "<<smallest;
          }
-     }
-
-     else if((choice=='l')||(choice=='L')){
-          if(numbers.size()==0)
+     }else if((choice=='l')||(choice=='L')){
+         if(numbers.size()==0)
             cout<<"Unable to calculate largest - no data.";
          else{
             int largest=numbers.at(0);
@@ -68,9 +63,11 @@ int main(){
             }
          cout<<"The largest number in the list is : "<<largest;
          }
-     }
-      else
+     }else if((choice=='q')||(choice=='Q')){
+        cout<<"Goodbye"<<endl;
+     }else{
          cout<<"Unknown selection, please try again";
+     }
    }
-      while((choice!='q')||(choice!='Q'));
+   while((choice!='q')&&(choice!='Q'));
 }
