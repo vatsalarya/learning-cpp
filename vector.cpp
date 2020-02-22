@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stdio.h>
 using namespace std;
 
 int main(){
@@ -68,6 +67,5 @@ int main(){
      }else{
          cout<<"Unknown selection, please try again";
      }
-   }
-   while((choice!='q')&&(choice!='Q'));
+   }while((choice!='q')&&(choice!='Q'));
 }
