@@ -1,5 +1,3 @@
-// Runs infinitely
-
 #include <iostream>
 #include <vector>
 #include <stdio.h>
@@ -8,7 +6,7 @@ using namespace std;
 int main(){
    
    vector <int> numbers;
-   int choice{};
+   char choice{};
    do{
       cout<<"Please select one of the following options : \n"
           <<"P - Print numbers\n" 
