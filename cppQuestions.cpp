@@ -73,3 +73,71 @@ int main()
     cout<<ptr;
     return 0;
 }
+
+int main()
+{
+    int *ptr, a=10;
+    ptr=&a;
+    *ptr+=1;
+    cout<<(13&25);
+    // cout<<"Hello World";
+// ANSWER-9
+    return 0;
+}
+
+//#WTF
+#include <iostream>
+
+using namespace std;
+class A{
+    int a;
+    public:
+    A(){
+        cout<<"A";
+    }
+};
+class B{
+    A a;
+    public:
+    B(){
+        cout<<"B";
+    }
+    static A get(){
+        return a;
+    }
+};
+
+A B::a;
+int main()
+{
+    B b;
+    A a1 = b.get();
+    
+}
+
+#include <iostream>
+using namespace std;
+class a{
+    int id;
+    static int count;
+    public:
+    a(){
+        count++;
+        id=count;
+        cout<<"const"<<id<<endl;
+    }
+    void add(){
+        count++;
+        cout<<count;
+    }
+    ~a(){
+        cout<<"dest"<<id<<endl;
+    }
+};
+int a::count=0;
+int main()
+{
+    a b[3];
+
+    return 0;
+}
